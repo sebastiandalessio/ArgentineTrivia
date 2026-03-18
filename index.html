@@ -621,15 +621,42 @@
 <div id="app" role="main">
 
   <!-- ═══ CONSULADO LOGO ═══ -->
-  <div class="page-logo" aria-label="Consulate General of Argentina in Atlanta">
-    <img
-      id="consulado-logo"
-      src="https://images2.imgbox.com/e3/49/mOIARkP1_o.png"
-      alt="Consulate General of Argentina in Atlanta"
-      onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block';"
-    />
-    <span class="logo-fallback" id="logo-fallback">Consulate General of Argentina in Atlanta</span>
-  </div>
+ <style>
+  .page-logo {
+    text-align: center;
+    margin: 16px 0;
+  }
+
+  .page-logo img {
+    width: 80%;
+    max-width: 220px;
+    height: auto;
+  }
+
+  /* Ajuste específico para pantallas chicas */
+  @media (max-width: 480px) {
+    .page-logo img {
+      width: 90%;
+      max-width: 260px;
+    }
+  }
+
+  .logo-fallback {
+    display: none;
+    font-size: 14px;
+    color: #555;
+  }
+</style>
+
+<div class="page-logo" aria-label="Consulate General of Argentina in Atlanta">
+  <img
+    id="consulado-logo"
+    src="https://images2.imgbox.com/e3/49/mOIARkP1_o.png"
+    alt="Consulate General of Argentina in Atlanta"
+    onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block';"
+  />
+  <span class="logo-fallback" id="logo-fallback">Consulate General of Argentina in Atlanta</span>
+</div>
 
   <!-- ═══════════════════════════════════════
        REGISTRATION SCREEN
